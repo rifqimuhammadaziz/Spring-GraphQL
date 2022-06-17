@@ -1,4 +1,5 @@
 type Student {
     id : String
     name : String
+    faculty : String
 }
