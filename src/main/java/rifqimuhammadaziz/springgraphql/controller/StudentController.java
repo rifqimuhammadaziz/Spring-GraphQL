@@ -1,6 +1,7 @@
 package rifqimuhammadaziz.springgraphql.controller;
 
 import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.ContextValue;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
@@ -32,7 +33,8 @@ public class StudentController {
     }
 
     @QueryMapping
-    public List<Student> getStudents() {
+    public List<Student> getStudents(@ContextValue Map<String, List<String>> headers) {
+        System.out.println(headers);
         return map.values().stream().collect(Collectors.toList());
     }
 }
