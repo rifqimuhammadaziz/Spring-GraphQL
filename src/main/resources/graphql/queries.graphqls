@@ -1,0 +1,4 @@
+type Query {
+    getHelloWorld(name : String) : String
+    getStudentById(id : String) : Student
+}
