@@ -1,3 +1,6 @@
 type Mutation {
     addStudent(name : String, faculty : String) : Student
+    addAuthor(name : String) : Author
+
+    deleteAuthor(id : String) : Author
 }
